@@ -60,6 +60,7 @@ webHook.send(
 	    	    	    .name("btn")
 	    	    	    .text("Some button")
 	    	    	    .value("btn")
+	    	    	    .type("button")
 	    	    )
 	    )
 );
