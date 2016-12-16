@@ -1,4 +1,4 @@
-package io.fries.slack.webhook;
+package io.fries.slack.webhook.trigger;
 
 public class Trigger {
 	
@@ -18,17 +18,9 @@ public class Trigger {
 	
 	private String responseUrl;
 	
-	public String token() {
-		return token;
-	}
-	
 	public Trigger token(String token) {
 		this.token = token;
 		return this;
-	}
-	
-	public String teamId() {
-		return teamId;
 	}
 	
 	public Trigger teamId(String teamId) {
@@ -36,17 +28,9 @@ public class Trigger {
 		return this;
 	}
 	
-	public String teamDomain() {
-		return teamDomain;
-	}
-	
 	public Trigger teamDomain(String teamDomain) {
 		this.teamDomain = teamDomain;
 		return this;
-	}
-	
-	public String channelId() {
-		return channelId;
 	}
 	
 	public Trigger channelId(String channelId) {
@@ -54,17 +38,9 @@ public class Trigger {
 		return this;
 	}
 	
-	public String channelName() {
-		return channelName;
-	}
-	
 	public Trigger channelName(String channelName) {
 		this.channelName = channelName;
 		return this;
-	}
-	
-	public String userId() {
-		return userId;
 	}
 	
 	public Trigger userId(String userId) {
@@ -72,17 +48,9 @@ public class Trigger {
 		return this;
 	}
 	
-	public String userName() {
-		return userName;
-	}
-	
 	public Trigger userName(String userName) {
 		this.userName = userName;
 		return this;
-	}
-	
-	public String command() {
-		return command;
 	}
 	
 	public Trigger command(String command) {
@@ -90,26 +58,14 @@ public class Trigger {
 		return this;
 	}
 	
-	public String triggerWord() {
-		return triggerWord;
-	}
-	
 	public Trigger triggerWord(String triggerWord) {
 		this.triggerWord = triggerWord;
 		return this;
 	}
 	
-	public String text() {
-		return text;
-	}
-	
 	public Trigger text(String text) {
 		this.text = text;
 		return this;
-	}
-	
-	public String responseUrl() {
-		return responseUrl;
 	}
 	
 	public Trigger responseUrl(String responseUrl) {

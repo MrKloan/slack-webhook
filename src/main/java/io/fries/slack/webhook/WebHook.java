@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import io.fries.slack.webhook.message.Message;
 import org.apache.http.entity.ContentType;
 import org.apache.http.protocol.HTTP;
 
@@ -30,9 +31,9 @@ public class WebHook {
 	public Optional<String> send(Message message) {
 		try {
 			HttpResponse<String> response = Unirest.post(url.toString())
-												   	.header(HTTP.CONTENT_TYPE, ContentType.APPLICATION_JSON.getMimeType())
-													.body(gson.toJson(message))
-													.asObject(String.class);
+				.header(HTTP.CONTENT_TYPE, ContentType.APPLICATION_JSON.getMimeType())
+				.body(gson.toJson(message))
+				.asObject(String.class);
 			
 			return Optional.ofNullable(response.getBody());
 		}
@@ -49,10 +50,8 @@ public class WebHook {
 	
 	@Override
 	public boolean equals(Object o) {
-		if(this == o)
-			return true;
-		if(o == null || getClass() != o.getClass())
-			return false;
+		if(this == o) return true;
+		if(o == null || getClass() != o.getClass()) return false;
 		
 		WebHook webHook = (WebHook)o;
 		return url.equals(webHook.url);

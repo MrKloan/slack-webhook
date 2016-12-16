@@ -1,4 +1,4 @@
-package io.fries.slack.webhook;
+package io.fries.slack.webhook.message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +20,9 @@ public class Message {
 	private Boolean replaceOriginal;
 	private Boolean deleteOriginal;
 	
-	public String username() {
-		return username;
-	}
-	
 	public Message username(String username) {
 		this.username = username;
 		return this;
-	}
-	
-	public String iconEmoji() {
-		return iconEmoji;
 	}
 	
 	public Message iconEmoji(String iconEmoji) {
@@ -38,17 +30,9 @@ public class Message {
 		return this;
 	}
 	
-	public String channel() {
-		return channel;
-	}
-	
 	public Message channel(String channel) {
 		this.channel = channel;
 		return this;
-	}
-	
-	public String text() {
-		return text;
 	}
 	
 	public Message text(String text) {
@@ -56,17 +40,9 @@ public class Message {
 		return this;
 	}
 	
-	public Boolean mrkdwn() {
-		return mrkdwn;
-	}
-	
 	public Message mrkdwn(boolean mrkdwn) {
 		this.mrkdwn = mrkdwn;
 		return this;
-	}
-	
-	public List<Attachment> attachments() {
-		return attachments;
 	}
 	
 	public Message attachment(Attachment attachment) {
@@ -77,26 +53,14 @@ public class Message {
 		return this;
 	}
 	
-	public ResponseType responseType() {
-		return responseType;
-	}
-	
 	public Message responseType(ResponseType responseType) {
 		this.responseType = responseType;
 		return this;
 	}
 	
-	public Boolean replaceOriginal() {
-		return replaceOriginal;
-	}
-	
 	public Message replaceOriginal(boolean replaceOriginal) {
 		this.replaceOriginal = replaceOriginal;
 		return this;
-	}
-	
-	public Boolean deleteOriginal() {
-		return deleteOriginal;
 	}
 	
 	public Message deleteOriginal(boolean deleteOriginal) {

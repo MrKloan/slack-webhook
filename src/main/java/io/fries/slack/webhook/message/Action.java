@@ -1,4 +1,4 @@
-package io.fries.slack.webhook;
+package io.fries.slack.webhook.message;
 
 public class Action {
 	
@@ -13,17 +13,9 @@ public class Action {
 	private String value;
 	private Confirmation confirm;
 	
-	public String name() {
-		return name;
-	}
-	
 	public Action name(String name) {
 		this.name = name;
 		return this;
-	}
-	
-	public String text() {
-		return text;
 	}
 	
 	public Action text(String text) {
@@ -31,17 +23,9 @@ public class Action {
 		return this;
 	}
 	
-	public Style style() {
-		return style;
-	}
-	
 	public Action style(Style style) {
 		this.style = style;
 		return this;
-	}
-	
-	public String type() {
-		return type;
 	}
 	
 	public Action type(String type) {
@@ -49,17 +33,9 @@ public class Action {
 		return this;
 	}
 	
-	public String value() {
-		return value;
-	}
-	
 	public Action value(String value) {
 		this.value = value;
 		return this;
-	}
-	
-	public Confirmation confirm() {
-		return confirm;
 	}
 	
 	public Action confirm(Confirmation confirm) {
