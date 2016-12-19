@@ -14,15 +14,27 @@ public class Message {
 	private String text;
 	private Boolean mrkdwn;
 	
-	private List<Attachment> attachments;
+	private final List<Attachment> attachments;
 	
 	private ResponseType responseType;
 	private Boolean replaceOriginal;
 	private Boolean deleteOriginal;
 	
+	public Message() {
+		this.attachments = new ArrayList<>();
+	}
+	
+	public String username() {
+		return username;
+	}
+	
 	public Message username(String username) {
 		this.username = username;
 		return this;
+	}
+	
+	public String iconEmoji() {
+		return iconEmoji;
 	}
 	
 	public Message iconEmoji(String iconEmoji) {
@@ -30,9 +42,17 @@ public class Message {
 		return this;
 	}
 	
+	public String channel() {
+		return channel;
+	}
+	
 	public Message channel(String channel) {
 		this.channel = channel;
 		return this;
+	}
+	
+	public String text() {
+		return text;
 	}
 	
 	public Message text(String text) {
@@ -40,17 +60,26 @@ public class Message {
 		return this;
 	}
 	
-	public Message mrkdwn(boolean mrkdwn) {
+	public Boolean mrkdwn() {
+		return mrkdwn;
+	}
+	
+	public Message mrkdwn(Boolean mrkdwn) {
 		this.mrkdwn = mrkdwn;
 		return this;
 	}
 	
+	public List<Attachment> attachments() {
+		return attachments;
+	}
+	
 	public Message attachment(Attachment attachment) {
-		if(attachments == null)
-			attachments = new ArrayList<>();
 		attachments.add(attachment);
-		
 		return this;
+	}
+	
+	public ResponseType responseType() {
+		return responseType;
 	}
 	
 	public Message responseType(ResponseType responseType) {
@@ -58,12 +87,20 @@ public class Message {
 		return this;
 	}
 	
-	public Message replaceOriginal(boolean replaceOriginal) {
+	public Boolean replaceOriginal() {
+		return replaceOriginal;
+	}
+	
+	public Message replaceOriginal(Boolean replaceOriginal) {
 		this.replaceOriginal = replaceOriginal;
 		return this;
 	}
 	
-	public Message deleteOriginal(boolean deleteOriginal) {
+	public Boolean deleteOriginal() {
+		return deleteOriginal;
+	}
+	
+	public Message deleteOriginal(Boolean deleteOriginal) {
 		this.deleteOriginal = deleteOriginal;
 		return this;
 	}

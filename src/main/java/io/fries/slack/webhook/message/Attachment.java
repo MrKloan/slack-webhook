@@ -29,12 +29,25 @@ public class Attachment {
 	
 	private Long ts;
 	
-	private List<Field> fields;
-	private List<Action> actions;
+	private final List<Field> fields;
+	private final List<Action> actions;
+	
+	public Attachment() {
+		this.fields = new ArrayList<>();
+		this.actions = new ArrayList<>();
+	}
+	
+	public String callbackId() {
+		return callbackId;
+	}
 	
 	public Attachment callbackId(String callbackId) {
 		this.callbackId = callbackId;
 		return this;
+	}
+	
+	public String fallback() {
+		return fallback;
 	}
 	
 	public Attachment fallback(String fallback) {
@@ -42,9 +55,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public String text() {
+		return text;
+	}
+	
 	public Attachment text(String text) {
 		this.text = text;
 		return this;
+	}
+	
+	public String title() {
+		return title;
 	}
 	
 	public Attachment title(String title) {
@@ -52,9 +73,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public URL titleLink() {
+		return titleLink;
+	}
+	
 	public Attachment titleLink(URL titleLink) {
 		this.titleLink = titleLink;
 		return this;
+	}
+	
+	public String color() {
+		return color;
 	}
 	
 	public Attachment color(String color) {
@@ -62,9 +91,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public String pretext() {
+		return pretext;
+	}
+	
 	public Attachment pretext(String pretext) {
 		this.pretext = pretext;
 		return this;
+	}
+	
+	public String authorName() {
+		return authorName;
 	}
 	
 	public Attachment authorName(String authorName) {
@@ -72,9 +109,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public URL authorLink() {
+		return authorLink;
+	}
+	
 	public Attachment authorLink(URL authorLink) {
 		this.authorLink = authorLink;
 		return this;
+	}
+	
+	public URL authorIcon() {
+		return authorIcon;
 	}
 	
 	public Attachment authorIcon(URL authorIcon) {
@@ -82,9 +127,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public URL imageUrl() {
+		return imageUrl;
+	}
+	
 	public Attachment imageUrl(URL imageUrl) {
 		this.imageUrl = imageUrl;
 		return this;
+	}
+	
+	public URL thumbUrl() {
+		return thumbUrl;
 	}
 	
 	public Attachment thumbUrl(URL thumbUrl) {
@@ -92,9 +145,17 @@ public class Attachment {
 		return this;
 	}
 	
+	public String footer() {
+		return footer;
+	}
+	
 	public Attachment footer(String footer) {
 		this.footer = footer;
 		return this;
+	}
+	
+	public URL footerIcon() {
+		return footerIcon;
 	}
 	
 	public Attachment footerIcon(URL footerIcon) {
@@ -102,24 +163,30 @@ public class Attachment {
 		return this;
 	}
 	
+	public Long ts() {
+		return ts;
+	}
+	
 	public Attachment ts(Long ts) {
 		this.ts = ts;
 		return this;
 	}
 	
+	public List<Field> fields() {
+		return fields;
+	}
+	
 	public Attachment field(Field field) {
-		if(fields == null)
-			fields = new ArrayList<>();
 		fields.add(field);
-		
 		return this;
 	}
 	
+	public List<Action> actions() {
+		return actions;
+	}
+	
 	public Attachment action(Action action) {
-		if(actions == null)
-			actions = new ArrayList<>();
 		actions.add(action);
-		
 		return this;
 	}
 	

@@ -16,14 +16,26 @@ public class Confirmation {
 		return this;
 	}
 	
+	public String text() {
+		return text;
+	}
+	
 	public Confirmation text(String text) {
 		this.text = text;
 		return this;
 	}
 	
+	public String okText() {
+		return okText;
+	}
+	
 	public Confirmation okText(String okText) {
 		this.okText = okText;
 		return this;
+	}
+	
+	public String dismissText() {
+		return dismissText;
 	}
 	
 	public Confirmation dismissText(String dismissText) {

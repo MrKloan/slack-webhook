@@ -18,9 +18,17 @@ public class Field {
 		return this;
 	}
 	
+	public String value() {
+		return value;
+	}
+	
 	public Field value(String value) {
 		this.value = value;
 		return this;
+	}
+	
+	public Boolean shortField() {
+		return shortField;
 	}
 	
 	public Field shortField(Boolean shortField) {
