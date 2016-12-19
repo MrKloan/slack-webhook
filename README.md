@@ -66,11 +66,6 @@ webHook.send(
 );
 ```
 
-### In development
-
- - Better `Action` handling
- - Being able to react to a `Trigger`
-
 ## Installation
 
 Maven:
