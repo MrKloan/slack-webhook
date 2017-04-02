@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class Action {
 	
-	enum Style { DEFAULT, PRIMARY, DANGER }
+	public enum Style { DEFAULT, PRIMARY, DANGER }
 	
 	private String name;
 	private String text;

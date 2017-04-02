@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 public class Message {
 	
-	enum ResponseType { IN_CHANNEL, EPHEMERAL }
+	public enum ResponseType { IN_CHANNEL, EPHEMERAL }
 	
 	private String username;
 	private String iconEmoji;
