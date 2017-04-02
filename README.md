@@ -13,56 +13,67 @@ WebHook webHook = new WebHook("https://hooks.slack.com/services/TXXXXXX/BXXXXXX/
 Simple `Message`: 
 ```java
 webHook.send(
-	new Message()
+	Message.builder()
 	    .username("slack-webhook API")
 	    .iconEmoji(":robot_face:")
 	    .text("This is not a test!")
+	    .build()
 );
 ```
 
 Add one or more `Attachment`s:
 ```java
 webHook.send(
-	new Message()
-	    .attachment(
-	    	new Attachment()
-	    	    .color("#3AA3E3")
-	    	    .title("Some message")
-	    )
+	Message.builder()
+	    .attachments(
+	    	Collections.singletonList(
+                Attachment.builder()
+                    .color("#3AA3E3")
+                    .title("Some message")
+                    .build()
+	    	)
+	    ).build()
 );
 ```
 
 Compose more complex messages using `Field`s and `Action`s:
 ```java
 webHook.send(
-	new Message()
-	    .username("slack-webhook API")
-	    .iconEmoji(":robot_face:")
-	    .text("This is not a test!")
-	    .attachment(
-	    	new Attachment()
-	    	    .color("#3AA3E3")
-	    	    .title("Some message")
-	    	    .field(
-	    	    	new Field()
-	    	    	    .title("Title 1")
-	    	    	    .value("Because, you know?")
-	    	    	    .shortField(true)
-	    	    )
-	    	    .field(
-	    	    	new Field()
-	    	    	    .title("Title 2")
-	    	    	    .value("Another reason")
-	    	    	    .shortField(true)
-	    	    )
-	    	    .action(
-	    	    	new Action()
-	    	    	    .name("btn")
-	    	    	    .text("Some button")
-	    	    	    .value("btn")
-	    	    	    .type("button")
-	    	    )
-	    )
+	Message.builder()
+        .username("SlackBOT")
+        .iconEmoji(":robot_face:")
+        .attachments(
+            Collections.singletonList(
+                Attachment.builder()
+                    .color("#3AA3E3")
+                    .title("Some messages")
+                    .fallback("Notification message")
+                    .fields(
+                        Collections.singletonList(
+                            Field.builder()
+                                .title("Title 1")
+                                .value("Because, you know?")
+                                .build()
+                        )
+                    )
+                    .actions(
+                        Collections.singletonList(
+                            Action.builder()
+                                .name("btn")
+                                .text("Some button")
+                                .value("btn")
+                                .type("button")
+                                .confirm(Confirmation.builder()
+                                    .title("Are you sure?")
+                                    .text("Really sure?")
+                                    .okText("Yes")
+                                    .dismissText("No")
+                                    .build()
+                                ).build()
+                        )
+                    ).build()
+            )
+        ).build()
 );
 ```
 

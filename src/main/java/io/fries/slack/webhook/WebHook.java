@@ -28,37 +28,20 @@ public class WebHook {
 		this.gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
 	}
 	
-	public Optional<String> send(Message message) {
+	public String send(Message message) {
+		if(message == null)
+			throw new IllegalArgumentException("WebHook message cannot be null.");
+		
 		try {
 			HttpResponse<String> response = Unirest.post(url.toString())
 				.header(HTTP.CONTENT_TYPE, ContentType.APPLICATION_JSON.getMimeType())
 				.body(gson.toJson(message))
 				.asObject(String.class);
 			
-			return Optional.ofNullable(response.getBody());
+			return response.getBody();
 		}
 		catch(UnirestException e) {
-			e.printStackTrace();
-			return Optional.empty();
+			throw new SlackWebHookException(e.getMessage(), e);
 		}
-	}
-	
-	@Override
-	public String toString() {
-		return url.toString();
-	}
-	
-	@Override
-	public boolean equals(Object o) {
-		if(this == o) return true;
-		if(o == null || getClass() != o.getClass()) return false;
-		
-		WebHook webHook = (WebHook)o;
-		return url.equals(webHook.url);
-	}
-	
-	@Override
-	public int hashCode() {
-		return url.hashCode();
 	}
 }
