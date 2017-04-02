@@ -8,8 +8,8 @@ import lombok.Data;
 @Data
 public class Field {
 
-	private final String title;
-	private final String value;
+	private String title;
+	private String value;
 	@SerializedName("short")
-	private final Boolean shortField;
+	private Boolean shortField;
 }

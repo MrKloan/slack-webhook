@@ -11,29 +11,29 @@ import java.util.List;
 @Data
 public class Attachment {
 	
-	private final String callbackId;
+	private String callbackId;
 	
-	private final String fallback;
-	private final String text;
+	private String fallback;
+	private String text;
 	
-	private final String title;
-	private final URL titleLink;
+	private String title;
+	private URL titleLink;
 	
-	private final String color;
-	private final String pretext;
+	private String color;
+	private String pretext;
 	
-	private final String authorName;
-	private final URL authorLink;
-	private final URL authorIcon;
+	private String authorName;
+	private URL authorLink;
+	private URL authorIcon;
 	
-	private final URL imageUrl;
-	private final URL thumbUrl;
+	private URL imageUrl;
+	private URL thumbUrl;
 	
-	private final String footer;
-	private final URL footerIcon;
+	private String footer;
+	private URL footerIcon;
 	
-	private final Long ts;
+	private Long ts;
 	
-	private final List<Field> fields;
-	private final List<Action> actions;
+	private List<Field> fields;
+	private List<Action> actions;
 }

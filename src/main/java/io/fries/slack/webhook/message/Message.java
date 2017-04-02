@@ -11,16 +11,16 @@ public class Message {
 	
 	enum ResponseType { IN_CHANNEL, EPHEMERAL }
 	
-	private final String username;
-	private final String iconEmoji;
-	private final String channel;
+	private String username;
+	private String iconEmoji;
+	private String channel;
 	
-	private final String text;
-	private final Boolean mrkdwn;
+	private String text;
+	private Boolean mrkdwn;
 	
-	private final List<Attachment> attachments;
+	private List<Attachment> attachments;
 	
-	private final ResponseType responseType;
-	private final Boolean replaceOriginal;
-	private final Boolean deleteOriginal;
+	private ResponseType responseType;
+	private Boolean replaceOriginal;
+	private Boolean deleteOriginal;
 }

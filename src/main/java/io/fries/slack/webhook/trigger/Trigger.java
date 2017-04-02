@@ -7,19 +7,19 @@ import lombok.Data;
 @Data
 public class Trigger {
 	
-	private final String token;
-	private final String teamId;
-	private final String teamDomain;
+	private String token;
+	private String teamId;
+	private String teamDomain;
 	
-	private final String channelId;
-	private final String channelName;
+	private String channelId;
+	private String channelName;
 	
-	private final String userId;
-	private final String userName;
+	private String userId;
+	private String userName;
 	
-	private final String command;
-	private final String triggerWord;
-	private final String text;
+	private String command;
+	private String triggerWord;
+	private String text;
 	
-	private final String responseUrl;
+	private String responseUrl;
 }

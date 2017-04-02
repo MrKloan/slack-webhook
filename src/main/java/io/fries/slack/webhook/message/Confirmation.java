@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class Confirmation {
 	
-	private final String title;
-	private final String text;
-	private final String okText;
-	private final String dismissText;
+	private String title;
+	private String text;
+	private String okText;
+	private String dismissText;
 }

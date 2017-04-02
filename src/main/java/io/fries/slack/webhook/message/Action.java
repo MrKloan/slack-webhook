@@ -9,12 +9,12 @@ public class Action {
 	
 	enum Style { DEFAULT, PRIMARY, DANGER }
 	
-	private final String name;
-	private final String text;
+	private String name;
+	private String text;
 	
-	private final Style style;
-	private final String type;
+	private Style style;
+	private String type;
 	
-	private final String value;
-	private final Confirmation confirm;
+	private String value;
+	private Confirmation confirm;
 }
