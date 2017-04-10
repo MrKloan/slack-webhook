@@ -93,7 +93,7 @@ Maven:
     <dependency>
         <groupId>io.fries</groupId>
         <artifactId>slack-webhook</artifactId>
-        <version>1.0-RC3</version>
+        <version>1.0-RC4</version>
     </dependency>
 </dependencies>
 ```
@@ -107,6 +107,6 @@ repositories {
 }
 
 dependencies {
-    compile 'io.fries:slack-webhook:1.0-RC3'
+    compile 'io.fries:slack-webhook:1.0-RC4'
 }
 ```
