@@ -4,7 +4,6 @@ import io.fries.slack.webhook.message.Action;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
 import java.util.List;
 
 @Builder
@@ -18,8 +17,8 @@ public class ActionPayload {
 	public Channel channel;
 	public User user;
 	
-	public Date actionTs;
-	public Date messageTs;
+	public String actionTs;
+	public String messageTs;
 	
 	public String attachmentId;
 	public String token;
