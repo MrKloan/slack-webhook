@@ -7,7 +7,14 @@ import lombok.Data;
 @Data
 public class Action {
 	
-	public enum Style { DEFAULT, PRIMARY, DANGER }
+	public enum Style {
+		DEFAULT, PRIMARY, DANGER;
+
+		@Override
+		public String toString() {
+			return super.toString().toLowerCase();
+		}
+	}
 	
 	private String name;
 	private String text;

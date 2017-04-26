@@ -9,7 +9,14 @@ import java.util.List;
 @Data
 public class Message {
 	
-	public enum ResponseType { IN_CHANNEL, EPHEMERAL }
+	public enum ResponseType {
+		IN_CHANNEL, EPHEMERAL;
+
+		@Override
+		public String toString() {
+			return super.toString().toLowerCase();
+		}
+	}
 	
 	private String username;
 	private String iconEmoji;
